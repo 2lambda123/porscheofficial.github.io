@@ -35,9 +35,9 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
           {description}
         </PText>
 
-        <PLink href={url} className={s.link}>
+        <a href={url} className={s.link}>
           Learn more
-        </PLink>
+        </a>
       </div>
     </div>
   );
