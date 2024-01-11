@@ -1,7 +1,7 @@
 @use "@porsche-design-system/components-js/styles" as *;
 
 :root {
-  --app-background: #{$pds-theme-dark-background-base};
+  --app-background: var(--dark-background-base);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,11 +18,11 @@
 
 html,
 body {
-  max-width: 100vw;
+  max-width: 100%;
 }
 
 body {
-  color: $pds-theme-dark-primary;
+  color: var(--dark-primary);
   background: var(--app-background);
 }
 
@@ -43,10 +43,10 @@ ul {
 
 .mdx-content {
   p-heading:not(:first-of-type) {
-    margin-top: $pds-spacing-fluid-large;
+    margin-top: var(--spacing-fluid-large);
   }
   p-heading {
-    margin-bottom: $pds-spacing-fluid-small;
+    margin-bottom: var(--spacing-fluid-small);
   }
 
   p-text-list {
@@ -58,7 +58,7 @@ ul {
   }
 
   p {
-    margin-bottom: $pds-spacing-fluid-small;
+    margin-bottom: var(--spacing-fluid-small);
   }
 
   p-tag {
@@ -68,6 +68,6 @@ ul {
 }
 
 .keyvalues {
-  margin-bottom: $pds-spacing-fluid-x-large;
+  margin-bottom: var(--spacing-fluid-x-large);
   grid-column: $pds-grid-narrow-column-start / $pds-grid-narrow-column-end;
 }
