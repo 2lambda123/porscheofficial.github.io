@@ -16,7 +16,12 @@ interface GithubResponse {
 }
 
 export const getGitHubData = async (repo: string): Promise<GithubResponse> => {
-  const res = await fetch(`https://api.github.com/repos/${repo}`);
+  let res;
+  try {
+    res = await fetch(`https://api.github.com/repos/${repo}`);
+  } catch (error) {
+    throw new Error("Failed to fetch data");
+  }
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
